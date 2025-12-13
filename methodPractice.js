@@ -23,5 +23,5 @@ let result = str1
   .split(" ")
   .map(word => word[0].toUpperCase() )
   .join(" ");
-
 console.log(result);
+
