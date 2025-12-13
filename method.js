@@ -18,14 +18,13 @@ console.log("Javascript".slice(0, 4));
 //sliceend
 console.log("suman".slice(-3));
 
-//imcludes
+//includes
 console.log("hello".includes("lo"));
 
 //indexOf;;
 console.log("javascript".indexOf("script"));
 
 //slice
-
 console.log("Javascript".slice(0, 4));
 
 //substring
@@ -40,10 +39,10 @@ console.log("Hi ".repeat(3));
 let n = "Suman";
 console.log(`My name is ${name}`);
 
-//split
+//split  convert string to array
 let s= "javascript "
 console.log(s.split(""));
-//join
+//join convert array to string
 let sn= ["javascript","is"];
 console.log(sn.join(" "));
 
