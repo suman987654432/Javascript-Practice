@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input id="suman" type="text" value="suman kumar">
+    <button onclick="showValue()">Click me</button>
+    <div id="output"></div>
+
+    <script>
+        function showValue(){
+           const element= document.getElementById("suman")
+           const output= document.getElementById("output")
+           output.innerText=element.value;
+        }
+    </script>
+</body>
+</html>

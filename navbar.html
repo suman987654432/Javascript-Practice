@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: lightgray;
+            padding: 10px;
+            width: 150px;
+        }
+
+        li {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: gray;
+            color: white;
+        }
+        .cross {
+            cursor: pointer;
+            font-size: 20px;
+            align-self: flex-end;
+        }
+        .tick {
+            cursor: pointer;
+            font-size: 20px;
+            align-self: flex-end;
+            display: none; 
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tick">✔️</div>
+    <ul>
+        <div class="cross">❌</div>
+        <li>home</li>
+        <li>about</li>
+        <li>services</li>
+        <li>contact</li>
+        <li>home</li>
+        <li>about</li>
+        <li>services</li>
+        <li>contact</li>
+    </ul>
+
+    <script>
+        const cross = document.querySelector(".cross");
+        const tick = document.querySelector(".tick");
+        const ul = document.querySelector("ul");
+
+        cross.addEventListener("click", function(){
+            ul.style.display = "none";
+            tick.style.display = "block";
+        });
+
+        tick.addEventListener("click", function(){
+            ul.style.display = "flex";
+            tick.style.display = "none";
+        });
+    </script>
+</body>
+</html>

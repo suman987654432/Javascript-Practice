@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">suman </div>
+    <div class="card">sumit </div>
+    <button onclick="show()">show</button>
+    <script>
+        function show(){
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card) => {
+            card.style.color = "blue";
+        })}
+    </script>
+</body>
+
+</html>
