@@ -9,6 +9,7 @@ else{
 }
 });
 
+
 promise
 .then((data) => {
     console.log(data);

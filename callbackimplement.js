@@ -43,7 +43,7 @@
 
 
  //USING PROMISES
- let cart = ["shirt", "pants", "tshirt"];
+let cart = ["shirt", "pants", "tshirt"];
 function createOrder(cart) {
   return new Promise((resolve, reject) => {
     if (!validateCart()) {
@@ -58,6 +58,9 @@ function createOrder(cart) {
 function validateCart() {
   return true;
 }
+
+
+
 function proceedToPayment(orderID) {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -66,6 +69,8 @@ function proceedToPayment(orderID) {
     }, 3000);
   });
 }
+
+
 function showOrderSummary(paymentInfo) {
   return new Promise((resolve) => {
     console.log("Order Summary shown: ", paymentInfo);
@@ -75,6 +80,7 @@ function showOrderSummary(paymentInfo) {
 function updateWallet() {
   console.log("Updated Wallet");
 }
+
 
 
 createOrder(cart)
