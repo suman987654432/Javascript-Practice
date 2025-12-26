@@ -96,3 +96,19 @@ createOrder(cart)
   .catch((err) => {
     console.log("Error", err);
   });
+
+
+Promise.all([
+  fetch("/1").then(res => res.json()),
+  fetch("/2").then(res => res.json()),
+  fetch("/3").then(res => res.json())
+])
+
+.then(([d1, d2, d3]) => {
+  console.log("Data 1:", d1);
+  console.log("Data 2:", d2);
+  console.log("Data 3:", d3);
+})
+.catch(err => {
+  console.log("Error:", err);
+});
