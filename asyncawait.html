@@ -23,6 +23,8 @@
             output.textContent = "Error : " + err;
           });
       }
+
+
       //   fetch data using async and await
       async function fetchWithAsync() {
         try {
@@ -35,6 +37,9 @@
           (output.textContent = "Error : "), error;
         }
       }
+
+
+
       // old way using xhr object
       function fetchUsingXHR() {
         const xhr = new XMLHttpRequest();
@@ -56,24 +61,4 @@
 
 
 
-const task = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("task done");
-  }, 1000);
-});
 
-task.then(result => console.log(result));
-
-
-
-Promise.all([
-  fetch("https://jsonplaceholder.typicode.com/users/1"),
-  fetch("https://jsonplaceholder.typicode.com/users/2"),
-  fetch("https://jsonplaceholder.typicode.com/users/3")
-])
-.then(([p1, p2, p3]) => {
-  console.log(p1);
-  console.log(p2);
-  console.log(p3);
-})
-.catch(err => console.log(err));
